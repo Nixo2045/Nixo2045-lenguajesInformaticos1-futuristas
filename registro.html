@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacia el Futuro</title>
+</head>
+<body>
+    <header>
+        <img src="./img/logo-futurista.jpg" alt="logo-futurista" height="100" width="100">
+        <h1>Nombre de la Ciudad</h1>
+        <h2>Donde la humanidad alcanza su máximo potencial.</h2>
+        <nav>
+            <ul>
+                <li> <a href="./index.html">Inicio</a> </li>
+                <li> <a href="./registro.html">Registro</a> </li>
+                <li> <a href="./historia.html">Historia</a> </li>
+                <li> <a href="#redes">Redes Sociales</a> </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h2>¡Comenza tu inscripción en "Nombre de la Ciudad"!</h2>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <br>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <br>
+            <label for="email">Correo Electronico</label>
+            <input type="email" name="email" id="email" placeholder="tu@correo.com" required>
+            <br>
+            <label for="fechaNac">Fecha de Nacimiento</label>
+            <input type="date" name="fechaNac" id="fechaNac" required>
+            <br>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="+5411337722">
+            <br>
+            <label for="genero">Género</label>
+            <select name="genero" id="genero">
+                <option value="" disabled selected>Elige tu Género</option>
+                <option value="masc">Masculino</option>
+                <option value="fem">Femenino</option>
+                <option value="bin">No binario / Otro</option>
+                <option value="nop">Prefiero no decirlo</option>
+            </select>
+            <br>
+            <label for="vivienda">Vivienda</label>
+            <select name="vivienda" id="vivienda" required>
+                <option value="" disabled selected>Elige tu tipo de vivienda</option>
+                <option value="depto-modular">Departamento Modular Inteligente (Paredes móviles automatizadas)</option>
+                <option value="casa-arbol">Eco-Hábitat Bio-Digital (Casa-árbol genética con energía bioluminiscente)</option>
+                <option value="mansion-flotante">Eco-Mansión Flotante (Levitación magnética y mayordomo robot)</option>
+            </select>
+            <br>
+            <label for="vivienda">Empleo</label>
+            <select name="empleo" id="empleo" required>
+                <option value="" disabled selected>Elige tu tipo de empleo</option>
+                <option value="propio">Tengo un empleo propio (Remoto / Autónomo)</option>
+                <option value="programador">Programador de Inteligencia Artificial</option>
+                <option value="mecanico">Mecánico de Robots y Drones de Reparto</option>
+                <option value="desarrollo">Programa de Trabajadores en Desarrollo (Aprender oficio)</option>
+            </select>
+            <br>
+            <label for="mensaje">Un Comentario</label>
+            <br>
+            <textarea name="mensaje" id="mensaje" rows="4" placeholder="Una información extra que quieras aportar"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+        <hr>
+    </main>
+    <footer id="redes">
+        <address>
+            <strong>Comunicate con nosotros</strong><br>
+            Ubicanos: <a href="https://share.google/xyvimEk6j176nDURd" target="_blank">Av. Figueroa Alcorta 7300, Ciudad de Buenos Aires</a> <br>
+            Teléfono: <a href="tel:+541140000000">+54 11 4000-0000</a><br>
+            Email: <a href="mailto:ciudadfuturista@hotmail.com">ciudadfuturista@hotmail.com</a>
+        </address>
+        <p>
+            <small>Nombre de Ciudad &copy; 2026</small>
+        </p>
+
+    </footer>
+</body>
+</html>
