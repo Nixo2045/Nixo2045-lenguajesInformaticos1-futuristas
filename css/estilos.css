@@ -1,0 +1,187 @@
+/*Paleta de Colores*/
+:root {
+    --color-primario: #52becc;
+    --color-acento: #f1f3f3;
+    --color-texto:#1a1a1a;
+    --color-fondo: #f9f7fa; 
+    --color-texto-claro: #c7c7c7;
+    --fuente-principal: "Inter", sans-serif;
+}
+/*Reset Básico*/
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+/*Estilos Globales*/
+html{font-size: 18px;}
+body {
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/*Tipografía*/
+h1, h2, h3{color: var(--color-texto);}
+h1{font-size: 2rem;}
+h2{font-size: 1.5rem;}
+h3{font-size: 1.25rem;}
+p{margin-top: 1rem;}
+/*Header*/
+header{
+    color: var(--color-texto);
+    background-color: var(--color-primario);
+    padding: 2rem;
+    width: 100%;
+}
+/*Menú de Navegación*/
+nav{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: 600;
+}
+nav a:hover{
+    color: var(--color-texto-claro);
+    text-decoration: underline;
+}
+main ul, main ol {
+    padding-left: 1.2rem;   /* Bajamos de 3.5rem a 1.2rem */
+    margin-top: 1rem;       
+    margin-bottom: 1.5rem;  
+}
+
+/* Mantiene el espacio entre renglones */
+main li {
+    margin-bottom: 0.8rem; 
+}
+/*Menú de Navegación*/
+nav{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav a {
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: 600;
+}
+nav a:hover{
+    color: var(--color-texto-claro);
+    text-decoration: underline;
+}
+/*MAIN Y SECCIONES*/
+main{
+    padding: 2rem;
+}
+section{
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-primario);
+}
+/* Para IMG */
+main section img {
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/*Figure (Sección pero de imagenes)*/
+figure {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+/*Para las Imagenes del Figure*/
+figure img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    object-fit: cover; /*Ajustar la imagen manteniendo sus dimenciones*/
+    border-radius: 5px;
+}
+figcaption{
+    grid-row: 1/-1;
+    text-align: center;
+    font-style: oblique;
+    margin-bottom: 2px;
+}
+/*Para IMAGENES (IMG) */
+
+/*FOOTER*/
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-acento);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+/* FORMULARIO REGISTRO*/
+form {
+    max-width: 600px;
+    margin: 1.5rem 0; 
+}
+/* Hace que las etiquetas se pongan ARRIBA de las cajas y tengan lindo espacio */
+form label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid var(--color-primario); 
+    border-radius: 5px;
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+}
+/* Evita que el cuadro de comentarios se pueda estirar feo hacia los lados */
+form textarea {
+    resize: vertical;
+}
+/* EL BOTÓN DE ENVIAR*/
+form button[type="submit"] {
+    display: block;
+    margin-top: 2rem;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+form button[type="submit"]:hover {
+    background-color: #419eab; /*Un celeste mas oscuro al apoyar*/
+}

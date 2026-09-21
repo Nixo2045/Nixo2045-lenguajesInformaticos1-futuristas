@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacia el Futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/estilos.css">
 </head>
 <body>
     <header>
-        <img src="./img/logo-futurista.jpg" alt="logo-futurista" height="100" width="100">
+        <img src="./img/logo-futurista.png" alt="logo-futurista" height="125" width="125">
         <h1>Nombre de la Ciudad</h1>
         <h2>Donde la humanidad alcanza su máximo potencial.</h2>
         <nav>
@@ -28,19 +32,19 @@
         <form>
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" placeholder="Nombre" required>
-            <br>
+            
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido" placeholder="Apellido" required>
-            <br>
+            
             <label for="email">Correo Electronico</label>
             <input type="email" name="email" id="email" placeholder="tu@correo.com" required>
-            <br>
+            
             <label for="fechaNac">Fecha de Nacimiento</label>
             <input type="date" name="fechaNac" id="fechaNac" required>
-            <br>
+            
             <label for="telefono">Teléfono</label>
-            <input type="tel" name="telefono" id="telefono" placeholder="+5411337722">
-            <br>
+            <input type="tel" name="telefono" id="telefono" placeholder="+541133772200">
+            
             <label for="genero">Género</label>
             <select name="genero" id="genero">
                 <option value="" disabled selected>Elige tu Género</option>
@@ -49,7 +53,7 @@
                 <option value="bin">No binario / Otro</option>
                 <option value="nop">Prefiero no decirlo</option>
             </select>
-            <br>
+            
             <label for="vivienda">Vivienda</label>
             <select name="vivienda" id="vivienda" required>
                 <option value="" disabled selected>Elige tu tipo de vivienda</option>
@@ -57,8 +61,8 @@
                 <option value="casa-arbol">Eco-Hábitat Bio-Digital (Casa-árbol genética con energía bioluminiscente)</option>
                 <option value="mansion-flotante">Eco-Mansión Flotante (Levitación magnética y mayordomo robot)</option>
             </select>
-            <br>
-            <label for="vivienda">Empleo</label>
+            
+            <label for="empleo">Empleo</label>
             <select name="empleo" id="empleo" required>
                 <option value="" disabled selected>Elige tu tipo de empleo</option>
                 <option value="propio">Tengo un empleo propio (Remoto / Autónomo)</option>
@@ -66,11 +70,11 @@
                 <option value="mecanico">Mecánico de Robots y Drones de Reparto</option>
                 <option value="desarrollo">Programa de Trabajadores en Desarrollo (Aprender oficio)</option>
             </select>
-            <br>
+            
             <label for="mensaje">Un Comentario</label>
-            <br>
+            
             <textarea name="mensaje" id="mensaje" rows="4" placeholder="Una información extra que quieras aportar"></textarea>
-            <br>
+            
             <button type="submit">Enviar</button>
         </form>
         <hr>
