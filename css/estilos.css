@@ -1,101 +1,132 @@
-/*Paleta de Colores*/
+/* ==========================================PALETA DE COLORES Y VARIABLES========================================== */
 :root {
     --color-primario: #52becc;
+    --color-primario-oscuro: #419eab;
     --color-acento: #f1f3f3;
-    --color-texto:#1a1a1a;
+    --color-texto: #1a1a1a;
     --color-fondo: #f9f7fa; 
     --color-texto-claro: #c7c7c7;
-    --fuente-principal: "Inter", sans-serif;
+    --fuente-principal: "Inter", system-ui, -apple-system, sans-serif;
 }
-/*Reset Básico*/
-*{
+
+/* ==========================================RESET BÁSICO Y ESTILOS GLOBALES========================================== */
+*, *::before, *::after {
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
-/*Estilos Globales*/
-html{font-size: 18px;}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--fuente-principal);
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--color-texto);
     background-color: var(--color-fondo);
-    margin: 0;
-    padding: 0;
     width: 100%;
 }
-/*Tipografía*/
-h1, h2, h3{color: var(--color-texto);}
-h1{font-size: 2rem;}
-h2{font-size: 1.5rem;}
-h3{font-size: 1.25rem;}
-p{margin-top: 1rem;}
-/*Header*/
-header{
+
+/* ==========================================TIPOGRAFÍA Y ELEMENTOS BÁSICOS========================================= */
+h1, h2, h3 {
+    color: var(--color-texto);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin-top: 1rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 2rem 0;
+}
+
+/* Listas dentro del Main */
+main ul, main ol {
+    padding-left: 1.2rem;
+    margin-top: 1rem;   
+    margin-bottom: 1.5rem;  
+}
+
+main li {
+    margin-bottom: 0.8rem; 
+}
+
+/* Listas de definición (dl, dt, dd) */
+dl {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--color-texto);
+}
+
+dd {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    color: #4a5568;
+}
+
+/* ==========================================HEADER Y NAVEGACIÓN========================================= */
+header {
     color: var(--color-texto);
     background-color: var(--color-primario);
     padding: 2rem;
     width: 100%;
 }
-/*Menú de Navegación*/
-nav{
-    margin-top: 0.5rem;
+
+/* Menú de Navegación */
+nav {
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
-}
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-nav a {
-    color: var(--color-fondo);
-    text-decoration: none;
-    font-weight: 600;
-}
-nav a:hover{
-    color: var(--color-texto-claro);
-    text-decoration: underline;
-}
-main ul, main ol {
-    padding-left: 1.2rem;   /* Bajamos de 3.5rem a 1.2rem */
-    margin-top: 1rem;       
-    margin-bottom: 1.5rem;  
 }
 
-/* Mantiene el espacio entre renglones */
-main li {
-    margin-bottom: 0.8rem; 
-}
-/*Menú de Navegación*/
-nav{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap; /* Permite que el menú se adapte en pantallas chicas */
+    gap: 1.2rem;
 }
+
 nav a {
     color: var(--color-fondo);
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease;
 }
-nav a:hover{
+
+nav a:hover,
+nav a:focus {
     color: var(--color-texto-claro);
     text-decoration: underline;
 }
-/*MAIN Y SECCIONES*/
-main{
+
+/* ==========================================MAIN Y SECCIONES======================================== */
+main {
     padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
 }
-section{
+
+section {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--color-primario);
 }
-/* Para IMG */
+
+/* Imágenes dentro de Secciones */
 main section img {
     width: 100%;
     max-width: 800px;
@@ -106,43 +137,146 @@ main section img {
     display: block;
 }
 
-/*Figure (Sección pero de imagenes)*/
+/* Figura y Galerías */
 figure {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
     justify-content: center;
+    margin: 1.5rem 0;
 }
-/*Para las Imagenes del Figure*/
+
 figure img {
-    width: 250px;
+    width: 100%;
     height: 250px;
-    text-align: center;
-    object-fit: cover; /*Ajustar la imagen manteniendo sus dimenciones*/
+    object-fit: cover; /* Ajusta la imagen manteniendo proporción */
     border-radius: 5px;
 }
-figcaption{
-    grid-row: 1/-1;
-    text-align: center;
-    font-style: oblique;
-    margin-bottom: 2px;
-}
-/*Para IMAGENES (IMG) */
 
-/*FOOTER*/
-footer {
-    background-color: var(--color-primario);
-    color: var(--color-acento);
-    padding: 1.5rem;
-    margin-top: 2rem;
+figcaption {
+    grid-column: 1 / -1; /* Ocupa todo el ancho disponible */
     text-align: center;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
 }
-/* FORMULARIO REGISTRO*/
+
+/* ==========================================TARJETAS Y LUGARES TURÍSTICOS========================================= */
+.tarjeta-turistica {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--color-primario);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-turistica h2 {
+    color: var(--color-primario-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-turistica h3 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    color: var(--color-texto);
+}
+
+.tarjeta-turistica .ubicacion {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================HITORIA Y TARJETAS========================================= */
+
+/* Título principal: limpio, sólido y con buen peso visual */
+h1 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0b3c5d; 
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Subtítulo del header*/
+header h2 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #333333; 
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+/* Títulos de sección dentro de <main> */
+main h2 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1d2731;
+    border-left: 5px solid #3282b8; 
+    padding-left: 12px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+main h3 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1d2731;
+    border-left: 3px solid #3282b8; 
+    padding-left: 10px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+figure.tarjeta-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra la imagen y el texto horizontalmente */
+    justify-content: center;
+
+    /* Estilos del contenedor */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    
+    /* Dimensiones y centrado externo */
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;      /* Centra todo el bloque en la página */
+}
+
+figure.tarjeta-imagen img {
+    width: 100%;
+    max-width: 700px;       /* Tamaño máximo visual de la imagen */
+    height: 300px;
+    object-fit: cover;      /* Mantiene la proporción sin deformar */
+    border-radius: 8px;
+    display: block;
+}
+
+figure.tarjeta-imagen figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* ==========================================FORMULARIO DE REGISTRO / CONTACTO========================================= */
 form {
     max-width: 600px;
     margin: 1.5rem 0; 
 }
-/* Hace que las etiquetas se pongan ARRIBA de las cajas y tengan lindo espacio */
+
 form label {
     display: block;
     margin-top: 1.2rem;
@@ -164,11 +298,11 @@ form textarea {
     font-family: var(--fuente-principal);
     font-size: 0.95rem;
 }
-/* Evita que el cuadro de comentarios se pueda estirar feo hacia los lados */
+
 form textarea {
     resize: vertical;
 }
-/* EL BOTÓN DE ENVIAR*/
+
 form button[type="submit"] {
     display: block;
     margin-top: 2rem;
@@ -182,40 +316,34 @@ form button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+
 form button[type="submit"]:hover {
-    background-color: #419eab; /*Un celeste mas oscuro al apoyar*/
+    background-color: var(--color-primario-oscuro);
 }
 
-
-/*Estilo de la pagina LUGARES TURÍSTICOS */
-
-
-.tarjeta-turistica {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-left: 5px solid var(--color-primario);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Título de cada lugar turístico */
-.tarjeta-turistica h2 {
-    color: var(--color-primario);
-    margin-bottom: 0.5rem;
-}
-
-.tarjeta-turistica h3 {
-    margin-top: 1.2rem;
-    margin-bottom: 0.4rem;
-    font-size: 1.1rem;
+/* ==========================================FOOTER========================================= */
+footer {
+    background-color: var(--color-primario);
     color: var(--color-texto);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
-.tarjeta-turistica .ubicacion {
-    font-size: 0.95rem;
-    color: #555555;
-    margin-top: 0;
-    margin-bottom: 1rem;
+footer address {
+    font-style: normal;
+    line-height: 1.8;
 }
+
+footer a {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+
+
