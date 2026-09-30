@@ -193,7 +193,7 @@ figcaption {
 
 /* ==========================================HITORIA Y TARJETAS========================================= */
 
-/* Título principal: limpio, sólido y con buen peso visual */
+/* Título principal */
 h1 {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     font-size: 2.5rem;
@@ -234,6 +234,7 @@ main h3 {
     margin-top: 24px;
     margin-bottom: 12px;
 }
+/* Imagenes y contono */
 figure.tarjeta-imagen {
     display: flex;
     flex-direction: column;
@@ -250,14 +251,14 @@ figure.tarjeta-imagen {
     /* Dimensiones y centrado externo */
     max-width: 800px;
     width: 100%;
-    margin: 2rem auto;      /* Centra todo el bloque en la página */
+    margin: 2rem auto;    
 }
 
 figure.tarjeta-imagen img {
     width: 100%;
-    max-width: 700px;       /* Tamaño máximo visual de la imagen */
+    max-width: 700px;       
     height: 300px;
-    object-fit: cover;      /* Mantiene la proporción sin deformar */
+    object-fit: cover;      
     border-radius: 8px;
     display: block;
 }
