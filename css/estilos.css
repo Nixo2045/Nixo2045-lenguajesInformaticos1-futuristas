@@ -1,6 +1,6 @@
 /* ==========================================PALETA DE COLORES Y VARIABLES========================================== */
 :root {
-    --color-primario: #52becc;
+    --color-primario: #1c9cad;
     --color-primario-oscuro: #419eab;
     --color-acento: #f1f3f3;
     --color-texto: #1a1a1a;
@@ -343,6 +343,18 @@ footer a {
 
 footer a:hover {
     color: #ffffff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer li {
+    margin: 10px 0;
 }
 
 
