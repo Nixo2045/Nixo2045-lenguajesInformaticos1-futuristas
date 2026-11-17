@@ -9,6 +9,52 @@
     --fuente-principal: "Inter", system-ui, -apple-system, sans-serif;
 }
 
+/* ==========================================PARA PONER EL MODO OSCURO JOJOJO========================================== */
+
+[data-bs-theme="dark"] {
+    --color-primario: #116470;
+    --color-primario-oscuro: #1c9cad;
+    --color-acento: #1e293b;
+    --color-texto: #f1f5f9;
+    --color-fondo: #0f172a;
+    --color-texto-claro: #94a3b8;
+}
+
+/* Esto lo puse para adaptar los títulos y tarjetas que tenían colores fijos a modo oscuro  jejeje*/
+[data-bs-theme="dark"] h1 {
+    color: #38bdf8;
+}
+
+[data-bs-theme="dark"] header h2 {
+    color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] main h2,
+[data-bs-theme="dark"] main h3 {
+    color: var(--color-texto);
+}
+
+[data-bs-theme="dark"] .tarjeta-turistica,
+[data-bs-theme="dark"] figure.tarjeta-imagen {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+[data-bs-theme="dark"] .tarjeta-turistica .ubicacion,
+[data-bs-theme="dark"] dd {
+    color: #cbd5e1;
+}
+
+[data-bs-theme="dark"] form input[type="text"],
+[data-bs-theme="dark"] form input[type="email"],
+[data-bs-theme="dark"] form input[type="date"],
+[data-bs-theme="dark"] form input[type="tel"],
+[data-bs-theme="dark"] form select,
+[data-bs-theme="dark"] form textarea {
+    color: var(--color-texto);
+}
+  
+
 /* ==========================================RESET BÁSICO Y ESTILOS GLOBALES========================================== */
 *, *::before, *::after {
     box-sizing: border-box;
