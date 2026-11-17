@@ -8,7 +8,6 @@
 -Leandro Vicentini
 -Antonhy Pérez
 -Rocio Rodriguez
--Morena Santucci
 
 ## Otros
 
